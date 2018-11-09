@@ -8,8 +8,8 @@ import os
 
 
 # Light hours on/off in hours
-l_on = 18
-l_off = 6
+l_on = 1
+l_off = 1
 # Reset cycle - set True if you are changing light cycles.
 reset_mem = False
 # set True to cycle fan False for fan always on
@@ -21,8 +21,8 @@ f_off = 60
 pause_light = False
 
 
-# Not advised to edit anything below this point.
 start_time = time.time()
+# Socket lists set as you like in relation to wirin, We are usingg BCM pins so remember to use the GGPIO numbering.
 soc_12v = {'fill': 12, 'drain': 16}
 soc_240v = {'fan': 20, 'light': 6}
 # Set water date and time list [day-month-year-hour-min,19-10-2018-18-40]
@@ -32,9 +32,9 @@ water_cycles = ['21-10-2018-16-55', '21-10-2018-17-00', '21-10-2018-17-05', '21-
 # Fill from mains sec/Water plants sec
 fill = 10
 drain = 203
-logging.basicConfig(filename='/home/mrks/fibg/log/run.log', level=logging.DEBUG,
+logging.basicConfig(filename='run.log', level=logging.DEBUG,
                     format='%(asctime)s %(levelname)s %(name)s %(message)s')
-loc = '/home/mrks/fibg/bin/memory'
+loc = 'memory'
 
 
 # Startup
