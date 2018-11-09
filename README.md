@@ -9,36 +9,36 @@ Adjust depending on your relay boards.
 I may make a tutorial on the hardware later.
 
 # Requirments
-RPi
-pickle
-python3
+* RPi
+* pickle
+* python3
 
 # How to install
-*Clone whole repository.
+* Clone whole repository.
 
 # How to configure
-* Set up the script confuration at the top.
+* Set up the script confuration at the top of the file fibgg.py
 * Liht cycle on/off, set in increments of hours
 l_on = 1
 
 l_off = 1
 * There is a memory file using Pickle and so if the unit reboots or the script is reset to adjust light cycles, set to True
 reset_mem = False
-# If you would like to cycle your fan, set to True
+* If you would like to cycle your fan, set to True
 fan_cycle_on = False
-# Fan cycle on/off seconds (only of fann_cycle_on is True)
+* Fan cycle on/off seconds (only of fann_cycle_on is True)
 f_on = 420
 
 f_off = 60
-# Set to False if you don't want to pause lights for 1st run.
+* Set to False if you don't want to pause lights for 1st run.
 pause_light = False
-# Socket lists set as you like in relation to your GPIO usage, use BCM pin numbers.
+* Socket lists set as you like in relation to your GPIO usage, use BCM pin numbers.
 soc_12v = {'fill': 12, 'drain': 16}
 
 soc_240v = {'fan': 20, 'light': 6}
-# Set water date and time list [day-month-year-hour-min,19-10-2018-18-40]
+* Set water date and time list [day-month-year-hour-min,19-10-2018-18-40]
 water_cycles = []
-# Fill from mains sec/Water plants sec
+* Fill from mains sec/Water plants sec
 fill = 10
 
 drain = 203
